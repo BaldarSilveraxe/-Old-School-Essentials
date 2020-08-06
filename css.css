@@ -1,0 +1,545 @@
+div.sheet-wrap {
+    margin: 0px -10px 0px -10px;
+    width: 870px;
+}
+
+input.sheet-type {
+    margin: 3px 5px 0px 5px;
+}
+
+div.sheet-type {
+    display: flex; 
+    justify-content: flex-end;
+}
+
+div.sheet-player {
+    display: grid;
+    grid-template-columns: 290px 290px 290px;
+    grid-template-rows: 129px auto auto;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 870px;
+}
+
+div.sheet-header_right {
+    grid-area: 1 / 3 / 2 / 4;
+    background: url("https://raw.githubusercontent.com/BaldarSilveraxe/-Old-School-Essentials/master/svg/ose.svg");
+    background-position: center center;
+    background-size: contain;
+}
+
+input.sheet-showtype[value="0"] ~ .sheet-player,
+input.sheet-showtype[value="1"] ~ .sheet-nonplr {
+    display: none;
+}
+
+div.sheet-column_a {
+    grid-area: 1 / 1 / 3 / 2; 
+}
+
+div.sheet-column_b {
+    grid-area: 1 / 2 / 3 / 3; 
+}
+
+div.sheet-column_c {
+    grid-area: 2 / 3 / 3 / 4; 
+}
+
+input[type="checkbox"].sheet-edit_mode_check {
+    opacity: 0;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+    zoom:1.5;
+}
+
+input[type="checkbox"].sheet-edit_mode_check + span::before,
+input[type="checkbox"].sheet-edit_mode_check:checked + span::before {
+    display: inline-block;
+    position: relative;
+    left: -15px;
+    font-family: Pictos;
+    font-size: 16px;
+    content: "p";
+    width: 20px;
+    height: 20px;
+}
+
+input[type="checkbox"].sheet-edit_mode_check:checked + span::before {
+    content: "*";
+}
+
+span.sheet-character_name {
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: -20px;
+}
+
+div.sheet-play,
+input.sheet-edit_mode[value="1"] ~ .sheet-edit {
+  display: block;
+  padding: 0px 2px 0px 0px;
+}
+
+div.sheet-edit,
+input.sheet-edit_mode[value="1"] ~ .sheet-play {
+    display: none;
+}
+
+div.sheet-features {
+    padding: 5px;
+    background-color: #d8e9d2;
+}
+
+input.sheet-input,
+select.sheet-input {
+    width: 100%;
+    margin: -2px 0px 10px 0px;
+}
+
+span.sheet-label {
+    font-weight: bold;
+    font-size: 12px;
+    margin-left: 8px;
+}
+
+span.sheet-section,
+span.sheet-section_white {
+    display: block;
+    font-size: larger;
+    font-weight: bold;
+    padding-left: 3px;
+    background-color: #d8e9d2;
+    margin-top: 5px;
+}
+
+span.sheet-section_white {
+    background-color: white;
+}
+
+div.sheet-abilities_edit {
+    display: grid;
+    grid-template-columns: 93px 92px 92px;
+    grid-template-rows: auto;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 278px;
+    padding: 5px;
+}
+
+div.sheet-abilities_edit_a{
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+div.sheet-abilities_edit_b {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+div.sheet-abilities_edit_c {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+
+td.sheet-abilitycell {
+    text-align: center; 
+    vertical-align: middle;
+}
+
+input.sheet-abilitycell {
+    text-align: center; 
+    vertical-align: middle;
+    width: 70px;
+}
+
+td.sheet-abilityheader {
+    text-align: center; 
+    vertical-align: bottom;
+    font-weight: bold;
+}
+
+.sheet-abilityeven {
+    background-color: #d8e9d2;
+}
+
+div.sheet-abilitycircle {
+  height: 60px;
+  width: 60px;
+  background-color: #d8e9d2;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+span.sheet-score_curr {
+    display: block;
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+td.sheet-abilityadjustmets {
+    text-align: left; 
+    vertical-align: center;
+}
+
+.sheet-big_three {
+    display: grid;
+    grid-template-columns: 96px 96px 96px;
+    grid-template-rows: 96px;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 288px;
+    margin-left: 1px;
+}
+
+.sheet-ac {
+    grid-area: 1 / 1 / 2 / 2;
+     background: url("https://raw.githubusercontent.com/BaldarSilveraxe/-Old-School-Essentials/master/svg/armorclass.svg");
+  background-position: center center;
+  background-size: contain;
+}
+.sheet-hp {
+    grid-area: 1 / 2 / 2 / 3;
+    background: url("https://raw.githubusercontent.com/BaldarSilveraxe/-Old-School-Essentials/master/svg/hitpoints.svg");
+  background-position: center center;
+  background-size: contain;
+}
+.sheet-in {
+    grid-area: 1 / 3 / 2 / 4;
+    background: url("https://raw.githubusercontent.com/BaldarSilveraxe/-Old-School-Essentials/master/svg/initiative.svg");
+  background-position: center center;
+  background-size: contain;
+}
+
+span.sheet-big_three {
+    display: block;
+    width: 96px;
+    text-align: center;
+    font-size: small;
+    margin-top: -3px;
+}
+
+input.sheet-big_three {
+    width: 96px;
+    height: 40px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    background: transparent;
+    border: 0;
+    margin-top: 17px;
+    padding: 0;
+    outline: 0;
+}
+
+input.sheet-big_three:hover { color: red }
+
+div.sheet-save_d {
+     background: url("https://raw.githubusercontent.com/BaldarSilveraxe/-Old-School-Essentials/master/svg/poisongas.svg");
+  background-position: center center;
+  background-size: contain;
+    height: 60px;
+  width: 60px;
+  margin: 5px;
+}
+
+div.sheet-save_w {
+     background: url("https://raw.githubusercontent.com/BaldarSilveraxe/-Old-School-Essentials/master/svg/wand.svg");
+  background-position: center center;
+  background-size: contain;
+    height: 60px;
+  width: 60px;
+  margin: 5px;
+}
+
+div.sheet-save_p {
+     background: url("https://raw.githubusercontent.com/BaldarSilveraxe/-Old-School-Essentials/master/svg/petrify.svg");
+  background-position: center center;
+  background-size: contain;
+    height: 60px;
+  width: 60px;
+  margin: 5px;
+}
+
+div.sheet-save_b {
+     background: url("https://raw.githubusercontent.com/BaldarSilveraxe/-Old-School-Essentials/master/svg/breath.svg");
+  background-position: center center;
+  background-size: contain;
+    height: 60px;
+  width: 60px;
+  margin: 5px;
+}
+
+div.sheet-save_s {
+     background: url("https://raw.githubusercontent.com/BaldarSilveraxe/-Old-School-Essentials/master/svg/spell.svg");
+  background-position: center center;
+  background-size: contain;
+    height: 60px;
+  width: 60px;
+  margin: 5px;
+}
+
+td.sheet-savecell {
+    text-align: center; 
+    vertical-align: middle;
+    width: 40px;
+}
+
+td.sheet-savelabel {
+    text-align: left; 
+    vertical-align: middle;
+    width: 170px;
+    padding-left: 5px;
+}
+
+span.sheet-save {
+    line-height: 50px;
+    text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+span.sheet-savelabel {
+    line-height: 25px;
+  font-size: 14px;
+  font-weight: bold;
+  
+}
+
+/*
+
+
+.sheet-rotate {
+  -moz-transform: rotate(-90.0deg);
+  -o-transform: rotate(-90.0deg);
+  -webkit-transform: rotate(-90.0deg);
+  filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=0.083);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083)";
+  transform: rotate(-90.0deg);
+}
+
+
+div.sheet-wrap {
+    margin: 0px -10px 0px -10px;
+    width: 870px;
+}
+
+input.sheet-type {
+    margin: 3px 5px 0px 5px;
+}
+
+div.sheet-type {
+    display: flex; 
+    justify-content: flex-end;
+}
+
+div.sheet-player {
+    display: grid;
+    grid-template-columns: 290px 290px 290px;
+    grid-template-rows: auto auto;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 870px;
+}
+
+div.sheet-nonplr {
+    display: grid;
+    grid-template-columns: 290px 290px 290px;
+    grid-template-rows: auto auto;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 870px;
+}
+
+input.sheet-showtype[value="0"] ~ .sheet-player,
+input.sheet-showtype[value="1"] ~ .sheet-nonplr {
+    display: none;
+}
+
+div.sheet-class {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+div.sheet-combt {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+div.sheet-stats {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+input[type="checkbox"].sheet-edit_mode {
+    opacity: 0;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+    zoom:1.5;
+}
+
+input[type="checkbox"].sheet-edit_mode + span::before,
+input[type="checkbox"].sheet-edit_mode:checked + span::before {
+    position: relative;
+    left: -15px;
+    font-family: Pictos;
+    font-size: 16px;
+    content: "p";
+}
+
+input[type="checkbox"].sheet-edit_mode:checked + span::before {
+    content: "*";
+}
+
+.sheet-play,
+.sheet-edit_mode:checked ~ .sheet-edit {
+  display: block;
+  padding: 5px;
+}
+
+.sheet-edit,
+.sheet-edit_mode:checked ~ .sheet-play {
+  display: none;
+}
+
+div.sheet-features {
+    padding: 5px;
+    background-color: #d8e9d2;
+}
+
+input.sheet-input,
+select.sheet-input {
+    width: 100%;
+    margin: 0px 0px 4px 0px;
+    font-size: 12px;
+}
+
+span.sheet-label {
+    font-size: 12px;
+    margin: 0px;
+}
+
+span.sheet-section,
+span.sheet-section_white {
+    display: block;
+    font-size: larger;
+    font-weight: bold;
+    padding-left: 3px;
+    background-color: #d8e9d2;
+    margin-top: 5px;
+}
+
+span.sheet-section_white {
+    background-color: white;
+}
+
+
+div.sheet-editabilites {
+    display: grid;
+    grid-template-columns: 140px 140px;
+    grid-template-rows: auto;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 280px;
+}
+
+div.sheet-editabilityscores {
+    grid-area: 1 / 1 / 2 / 2;
+    padding: 0px 2px 0px 5px;
+}
+
+div.sheet-editabilitybuffs {
+    grid-area: 1 / 2 / 2 / 3;
+    padding: 0px 5px 0px 2px;
+}
+
+span.sheet-title:empty {
+    display: none;
+}
+
+span.sheet-title:not(:empty) {
+    display: block;
+    font-size: small;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+span.sheet-character_name {
+    display: block;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+}
+
+span.sheet-alignment {
+    display: block;
+    font-size: small;
+    text-align: center;
+}
+
+div.sheet-features {
+    padding: 5px;
+    background-color: #d8e9d2;
+}
+
+div.sheet-abilities {
+    display: grid;
+    grid-template-columns: 100px 180px;
+    grid-template-rows: auto;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 280px;
+}
+
+div.sheet-abilityScore {
+    grid-area: 1 / 1/ 2 / 2;
+    padding: 0px 0px 0px 0px;
+    background-color: white
+}
+
+div.sheet-abilityLabel {
+    grid-area: 1 / 2 / 2 / 3;
+    padding: 0px 0px 0px 0px;
+}
+
+div.sheet-abilitycircle {
+  height: 80px;
+  width: 80px;
+  background-color: #d8e9d2;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+div.sheet-abilityMods {
+  height: 80px;
+  width: 160px;
+  margin: 10px;
+}
+
+span.sheet-score_curr {
+    display: block;
+    height: 80px;
+    width: 80px;
+    line-height: 80px;
+    text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+*/
+
+
+
+
+
