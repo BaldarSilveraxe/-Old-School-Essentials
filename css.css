@@ -1,20 +1,26 @@
-div.sheet-wrap {
+div.sheet-sheet-wrap {
     margin: 0px -10px 0px -10px;
+    width: 870px;
+    color: #555555;
+}
+
+div.sheet-show_type {
+    display: flex; 
+    justify-content: flex-end;
     width: 870px;
 }
 
-input.sheet-type {
-    margin: 3px 5px 0px 5px;
+.sheet-center {
+    text-align: center;
 }
 
-div.sheet-type {
-    display: flex; 
-    justify-content: flex-end;
+input.sheet-show_type {
+    margin: 3px 5px 0px 5px;
 }
 
 div.sheet-player {
     display: grid;
-    grid-template-columns: 290px 290px 290px;
+    grid-template-columns: 288px 4px 288px 4px 288px;
     grid-template-rows: 129px auto auto;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
@@ -22,27 +28,10 @@ div.sheet-player {
 }
 
 div.sheet-header_right {
-    grid-area: 1 / 3 / 2 / 4;
-    background: url("https://raw.githubusercontent.com/BaldarSilveraxe/-Old-School-Essentials/master/svg/ose.svg");
+    grid-area: 1 / 5 / 2 / 6;
+    background: url("https://raw.githubusercontent.com/BaldarSilveraxe/-Old-School-Essentials/master/svg/ose_logo.svg");
     background-position: center center;
     background-size: contain;
-}
-
-input.sheet-showtype[value="0"] ~ .sheet-player,
-input.sheet-showtype[value="1"] ~ .sheet-nonplr {
-    display: none;
-}
-
-div.sheet-column_a {
-    grid-area: 1 / 1 / 3 / 2; 
-}
-
-div.sheet-column_b {
-    grid-area: 1 / 2 / 3 / 3; 
-}
-
-div.sheet-column_c {
-    grid-area: 2 / 3 / 3 / 4; 
 }
 
 input[type="checkbox"].sheet-edit_mode_check {
@@ -60,13 +49,45 @@ input[type="checkbox"].sheet-edit_mode_check:checked + span::before {
     left: -15px;
     font-family: Pictos;
     font-size: 16px;
-    content: "p";
+    content: "*";
     width: 20px;
     height: 20px;
+    pointer-events: none;
+    z-index: -1;
 }
 
 input[type="checkbox"].sheet-edit_mode_check:checked + span::before {
-    content: "*";
+    content: "p";
+}
+
+input.sheet-show_type[value="0"] ~ .sheet-player,
+input.sheet-show_type[value="1"] ~ .sheet-nonplr {
+    display: none;
+}
+
+div.sheet-column_a {
+    grid-area: 1 / 1 / 3 / 2;
+    width: 288px;
+}
+
+div.sheet-column_b {
+    grid-area: 1 / 3 / 3 / 4;
+    width: 288px;
+}
+
+div.sheet-column_c {
+    grid-area: 2 / 5 / 3 / 6;
+    width: 288px;
+}
+
+div.sheet-play,
+div.sheet-edit {
+  display: block;
+}
+
+input.sheet-edit_mode[value="1"] ~ .sheet-edit,
+input.sheet-edit_mode[value="0"] ~ .sheet-play {
+    display: none;
 }
 
 span.sheet-character_name {
@@ -74,18 +95,10 @@ span.sheet-character_name {
     text-align: center;
     font-size: 30px;
     font-weight: bold;
+    color: #555555;
     margin-top: -20px;
-}
-
-div.sheet-play,
-input.sheet-edit_mode[value="1"] ~ .sheet-edit {
-  display: block;
-  padding: 0px 2px 0px 0px;
-}
-
-div.sheet-edit,
-input.sheet-edit_mode[value="1"] ~ .sheet-play {
-    display: none;
+    pointer-events: none;
+    z-index: -1;
 }
 
 div.sheet-features {
@@ -93,25 +106,37 @@ div.sheet-features {
     background-color: #d8e9d2;
 }
 
-input.sheet-input,
-select.sheet-input {
-    width: 100%;
-    margin: -2px 0px 10px 0px;
+div.sheet-standard {
+    padding: 5px;
 }
 
-span.sheet-label {
+span.sheet-class_label,
+span.sheet-common_label,
+span.sheet-common_value {
+    color: #555555;
+}
+
+span.sheet-class_label,
+span.sheet-common_label {
     font-weight: bold;
-    font-size: 12px;
-    margin-left: 8px;
+}
+
+span.sheet-class_label {
+    font-size: 16px;
+}
+
+span.sheet-class_label:after {
+    content: ": ";
 }
 
 span.sheet-section,
 span.sheet-section_white {
     display: block;
-    font-size: larger;
+    font-size: 18px;
     font-weight: bold;
     padding-left: 3px;
     background-color: #d8e9d2;
+    color: #555555;
     margin-top: 5px;
 }
 
@@ -119,71 +144,137 @@ span.sheet-section_white {
     background-color: white;
 }
 
-div.sheet-abilities_edit {
-    display: grid;
-    grid-template-columns: 93px 92px 92px;
-    grid-template-rows: auto;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    width: 278px;
-    padding: 5px;
-}
-
-div.sheet-abilities_edit_a{
-    grid-area: 1 / 1 / 2 / 2;
-}
-
-div.sheet-abilities_edit_b {
-    grid-area: 1 / 2 / 2 / 3;
-}
-
-div.sheet-abilities_edit_c {
-    grid-area: 1 / 3 / 2 / 4;
-}
-
-
-td.sheet-abilitycell {
-    text-align: center; 
-    vertical-align: middle;
-}
-
-input.sheet-abilitycell {
-    text-align: center; 
-    vertical-align: middle;
-    width: 70px;
-}
-
-td.sheet-abilityheader {
-    text-align: center; 
-    vertical-align: bottom;
-    font-weight: bold;
-}
-
-.sheet-abilityeven {
-    background-color: #d8e9d2;
-}
-
-div.sheet-abilitycircle {
-  height: 60px;
-  width: 60px;
-  background-color: #d8e9d2;
-  border-radius: 50%;
-  margin: 5px;
-}
-
 span.sheet-score_curr {
     display: block;
+    background-color: #d8e9d2;
+    border-radius: 50%;
     height: 60px;
     width: 60px;
     line-height: 60px;
     text-align: center;
-  font-size: 40px;
-  font-weight: bold;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 5px;
+    color: #555555;
 }
 
-td.sheet-abilityadjustmets {
+span.sheet-ability_label {
+    display: block;
+    height: 60px; 
+    line-height: 60px;
+    text-align: center;
+    margin: 5px;
+    color: #555555;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+input.sheet-input,
+select.sheet-input {
+    width: 100%;
+    margin: -2px 0px 10px 0px;
+    color: #555555;
+}
+
+span.sheet-label {
+    font-weight: bold;
+    font-size: 12px;
+    margin-left: 8px;
+    color: #555555;
+}
+
+td.sheet-saveheader,
+td.sheet-abilityheader {
+    text-align: center; 
+    vertical-align: bottom;
+    font-weight: bold;
+    color: #555555;
+}
+
+.sheet-saveeven,
+.sheet-abilityeven {
+    background-color: #d8e9d2;
+}
+
+td.sheet-savecell,
+td.sheet-abilitycell {
+    text-align: center; 
+    vertical-align: middle;
+    color: #555555;
+}
+
+input.sheet-savecell,
+input.sheet-abilitycell {
+    text-align: center; 
+    vertical-align: middle;
+    width: 70px;
+    color: #555555;
+}
+
+div.sheet-save_d,
+div.sheet-save_w,
+div.sheet-save_p,
+div.sheet-save_b,
+div.sheet-save_s {
+    height: 60px;
+    width: 60px;
+    margin: 5px; 
+}
+
+div.sheet-save_d {
+    background: url("https://raw.githubusercontent.com/BaldarSilveraxe/-Old-School-Essentials/master/svg/save_death.svg");
+    background-position: center center;
+    background-size: contain;
+}
+
+div.sheet-save_w {
+    background: url("https://raw.githubusercontent.com/BaldarSilveraxe/-Old-School-Essentials/master/svg/save_wand.svg");
+    background-position: center center;
+    background-size: contain;
+}
+
+div.sheet-save_p {
+    background: url("https://raw.githubusercontent.com/BaldarSilveraxe/-Old-School-Essentials/master/svg/save_medusa.svg");
+    background-position: center center;
+    background-size: contain;
+}
+
+div.sheet-save_b {
+    background: url("https://raw.githubusercontent.com/BaldarSilveraxe/-Old-School-Essentials/master/svg/save_breath.svg");
+    background-position: center center;
+    background-size: contain;
+}
+
+div.sheet-save_s {
+    background: url("https://raw.githubusercontent.com/BaldarSilveraxe/-Old-School-Essentials/master/svg/save_spell.svg");
+    background-position: center center;
+    background-size: contain;
+}
+
+td.sheet-savecell {
+    text-align: center; 
+    vertical-align: middle;
+    width: 40px;
+}
+
+td.sheet-savelabel {
     text-align: left; 
-    vertical-align: center;
+    vertical-align: middle;
+    width: 170px;
+    padding-left: 5px;
+}
+
+span.sheet-save {
+    line-height: 50px;
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+span.sheet-savelabel {
+    line-height: 25px;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 .sheet-big_three {
@@ -236,310 +327,67 @@ input.sheet-big_three {
     outline: 0;
 }
 
-input.sheet-big_three:hover { color: red }
-
-div.sheet-save_d {
-     background: url("https://raw.githubusercontent.com/BaldarSilveraxe/-Old-School-Essentials/master/svg/poisongas.svg");
-  background-position: center center;
-  background-size: contain;
-    height: 60px;
-  width: 60px;
-  margin: 5px;
+input.sheet-big_three:hover {
+    color: red
 }
 
-div.sheet-save_w {
-     background: url("https://raw.githubusercontent.com/BaldarSilveraxe/-Old-School-Essentials/master/svg/wand.svg");
-  background-position: center center;
-  background-size: contain;
+div.sheet-twenty,
+div.sheet-attdam,
+div.sheet-missle,
+div.sheet-dex_ac {
+    display: block;
     height: 60px;
-  width: 60px;
-  margin: 5px;
+    width: 60px;
+    margin: 6px; 
 }
 
-div.sheet-save_p {
-     background: url("https://raw.githubusercontent.com/BaldarSilveraxe/-Old-School-Essentials/master/svg/petrify.svg");
-  background-position: center center;
-  background-size: contain;
-    height: 60px;
-  width: 60px;
-  margin: 5px;
+div.sheet-twenty {
+    background: url("https://raw.githubusercontent.com/BaldarSilveraxe/-Old-School-Essentials/master/svg/twenty.svg");
+    background-position: center center;
+    background-size: contain;
 }
 
-div.sheet-save_b {
-     background: url("https://raw.githubusercontent.com/BaldarSilveraxe/-Old-School-Essentials/master/svg/breath.svg");
-  background-position: center center;
-  background-size: contain;
-    height: 60px;
-  width: 60px;
-  margin: 5px;
+div.sheet-attdam {
+    background: url("https://raw.githubusercontent.com/BaldarSilveraxe/-Old-School-Essentials/master/svg/attdam.svg");
+    background-position: center center;
+    background-size: contain;
 }
 
-div.sheet-save_s {
-     background: url("https://raw.githubusercontent.com/BaldarSilveraxe/-Old-School-Essentials/master/svg/spell.svg");
-  background-position: center center;
-  background-size: contain;
-    height: 60px;
-  width: 60px;
-  margin: 5px;
+div.sheet-missle {
+    background: url("https://raw.githubusercontent.com/BaldarSilveraxe/-Old-School-Essentials/master/svg/dex_adj.svg");
+    background-position: center center;
+    background-size: contain;
 }
 
-td.sheet-savecell {
+div.sheet-dex_ac {
+    background: url("https://raw.githubusercontent.com/BaldarSilveraxe/-Old-School-Essentials/master/svg/dodging.svg");
+    background-position: center center;
+    background-size: contain;
+}
+
+div.sheet-thaco,
+div.sheet-attbo {
+  display: block;
+}
+
+input.sheet-thaco_on[value="1"] ~ .sheet-attbo,
+input.sheet-thaco_on[value="0"] ~ .sheet-thaco {
+    display: none;
+}
+
+td.sheet-combatcell {
     text-align: center; 
     vertical-align: middle;
-    width: 40px;
 }
 
-td.sheet-savelabel {
-    text-align: left; 
-    vertical-align: middle;
-    width: 170px;
-    padding-left: 5px;
-}
-
-span.sheet-save {
-    line-height: 50px;
-    text-align: center;
-  font-size: 35px;
-  font-weight: bold;
-}
-
-span.sheet-savelabel {
-    line-height: 25px;
-  font-size: 14px;
-  font-weight: bold;
-  
-}
-
-/*
-
-
-.sheet-rotate {
-  -moz-transform: rotate(-90.0deg);
-  -o-transform: rotate(-90.0deg);
-  -webkit-transform: rotate(-90.0deg);
-  filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=0.083);
-  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083)";
-  transform: rotate(-90.0deg);
-}
-
-
-div.sheet-wrap {
-    margin: 0px -10px 0px -10px;
-    width: 870px;
-}
-
-input.sheet-type {
-    margin: 3px 5px 0px 5px;
-}
-
-div.sheet-type {
-    display: flex; 
-    justify-content: flex-end;
-}
-
-div.sheet-player {
-    display: grid;
-    grid-template-columns: 290px 290px 290px;
-    grid-template-rows: auto auto;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    width: 870px;
-}
-
-div.sheet-nonplr {
-    display: grid;
-    grid-template-columns: 290px 290px 290px;
-    grid-template-rows: auto auto;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    width: 870px;
-}
-
-input.sheet-showtype[value="0"] ~ .sheet-player,
-input.sheet-showtype[value="1"] ~ .sheet-nonplr {
-    display: none;
-}
-
-div.sheet-class {
-    grid-area: 1 / 1 / 2 / 2;
-}
-
-div.sheet-combt {
-    grid-area: 1 / 2 / 2 / 3;
-}
-
-div.sheet-stats {
-    grid-area: 1 / 3 / 2 / 4;
-}
-
-input[type="checkbox"].sheet-edit_mode {
-    opacity: 0;
-    position: relative;
-    cursor: pointer;
-    z-index: 1;
-    zoom:1.5;
-}
-
-input[type="checkbox"].sheet-edit_mode + span::before,
-input[type="checkbox"].sheet-edit_mode:checked + span::before {
-    position: relative;
-    left: -15px;
-    font-family: Pictos;
-    font-size: 16px;
-    content: "p";
-}
-
-input[type="checkbox"].sheet-edit_mode:checked + span::before {
-    content: "*";
-}
-
-.sheet-play,
-.sheet-edit_mode:checked ~ .sheet-edit {
-  display: block;
-  padding: 5px;
-}
-
-.sheet-edit,
-.sheet-edit_mode:checked ~ .sheet-play {
-  display: none;
-}
-
-div.sheet-features {
-    padding: 5px;
-    background-color: #d8e9d2;
-}
-
-input.sheet-input,
-select.sheet-input {
-    width: 100%;
-    margin: 0px 0px 4px 0px;
-    font-size: 12px;
-}
-
-span.sheet-label {
-    font-size: 12px;
-    margin: 0px;
-}
-
-span.sheet-section,
-span.sheet-section_white {
-    display: block;
-    font-size: larger;
-    font-weight: bold;
-    padding-left: 3px;
-    background-color: #d8e9d2;
-    margin-top: 5px;
-}
-
-span.sheet-section_white {
-    background-color: white;
-}
-
-
-div.sheet-editabilites {
-    display: grid;
-    grid-template-columns: 140px 140px;
-    grid-template-rows: auto;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    width: 280px;
-}
-
-div.sheet-editabilityscores {
-    grid-area: 1 / 1 / 2 / 2;
-    padding: 0px 2px 0px 5px;
-}
-
-div.sheet-editabilitybuffs {
-    grid-area: 1 / 2 / 2 / 3;
-    padding: 0px 5px 0px 2px;
-}
-
-span.sheet-title:empty {
-    display: none;
-}
-
-span.sheet-title:not(:empty) {
-    display: block;
-    font-size: small;
-    text-align: center;
-    text-transform: capitalize;
-}
-
-span.sheet-character_name {
-    display: block;
-    text-align: center;
-    font-size: large;
+span.sheet-common_value {
+    font-size: 14px;
     font-weight: bold;
 }
 
-span.sheet-alignment {
-    display: block;
-    font-size: small;
-    text-align: center;
+span.sheet-combat_label {
+    font-size: 14px;
+    font-weight: bold;
 }
-
-div.sheet-features {
-    padding: 5px;
-    background-color: #d8e9d2;
-}
-
-div.sheet-abilities {
-    display: grid;
-    grid-template-columns: 100px 180px;
-    grid-template-rows: auto;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    width: 280px;
-}
-
-div.sheet-abilityScore {
-    grid-area: 1 / 1/ 2 / 2;
-    padding: 0px 0px 0px 0px;
-    background-color: white
-}
-
-div.sheet-abilityLabel {
-    grid-area: 1 / 2 / 2 / 3;
-    padding: 0px 0px 0px 0px;
-}
-
-div.sheet-abilitycircle {
-  height: 80px;
-  width: 80px;
-  background-color: #d8e9d2;
-  border-radius: 50%;
-  margin: 10px;
-}
-
-div.sheet-abilityMods {
-  height: 80px;
-  width: 160px;
-  margin: 10px;
-}
-
-span.sheet-score_curr {
-    display: block;
-    height: 80px;
-    width: 80px;
-    line-height: 80px;
-    text-align: center;
-  font-size: 50px;
-  font-weight: bold;
-}
-
-
-
-
-
-
-
-
-
-
-*/
-
-
-
 
 
