@@ -1,115 +1,82 @@
 <div class="wrap">
-    
-
-<div class="type">PC<input type="checkbox" name="attr_sheet_type" class="type" value="1" checked></div>
-    <input type="hidden" name="attr_sheet_type" value="1" class="showtype">
-    
+    <div class="show_type">PC<input type="checkbox" name="attr_sheet_type" class="show_type"checked value="1"></div>
+    <input type="hidden" name="attr_sheet_type" value="1" class="show_type">
     <div class="player">
         <div class="header_right"></div>
         <div class="column_a">
-            <input type="checkbox" class="edit_mode_check" name="attr_edit_mode" value="1"><span></span>
-            <input type="hidden" name="attr_edit_mode" class="edit_mode">
+            <input type="checkbox" class="edit_mode_check" name="attr_edit_mode" value="1" checked><span></span>
+            <input type="hidden" name="attr_edit_mode" class="edit_mode" value="1">
+            
             <div class="play">
                 <span class="character_name" name="attr_character_name"></span>
                 <div class="features">
-                    <b><span name="attr_class"></span> </b>( Level: <span name="attr_level"></span>, Hit Dice: <span name="attr_hit_dice"></span> )<br />
-                    <b>Alignment: </b><span class="alignment" name="attr_alignment"></span><br />
-                    <b>Level Title: </b><span class="title" name="attr_title"></span><br />
-                    <b>Requirements: </b><span name="attr_requirements"></span><br />
-                    <b>Prime Requisite: </b><span name="attr_prime_requisite"></span><br />
-                    <b>Armour: </b><span name="attr_restrictions_armour"></span><br />
-                    <b>Weapons: </b><span name="attr_restrictions_weapons"></span><br />
-                    <b>Native Languages: </b><span name="attr_starting_languages"></span><br />
+                    <span class="class_label" name="attr_class"></span>Level: <span name="attr_level"></span>, Hit Dice: <span name="attr_hit_dice"></span><br />
+                    <span class="common_label">Alignment: </span><span class="common_value" name="attr_alignment"></span><br />
+                    <span class="common_label">Level Title: </span><span class="common_value" name="attr_title"></span><br />
+                    <span class="common_label">Requirements: </span><span class="common_value" name="attr_requirements"></span><br />
+                    <span class="common_label">Prime Requisite: </span><span class="common_value" name="attr_prime_requisite"></span><br />
+                    <span class="common_label">Armour: </span><span class="common_value" name="attr_restrictions_armour"></span><br />
+                    <span class="common_label">Weapons: </span><span class="common_value" name="attr_restrictions_weapons"></span><br />
+                    <span class="common_label">Native Languages: </span><span class="common_value" name="attr_starting_languages"></span><br />
                 </div>
                 <span class="section_white">Ability Scores</span>
                 <table>
                     <tr>
+                        <td><span class="ability_label">STR</span></td>
+                        <td><span name="attr_strength_curr" class="score_curr"></span></td>
                         <td>
-                            <div class="abilitycircle">
-                                <span name="attr_strength_curr" class="score_curr"></span>    
-                            </div>
-                        </td>
-                        <td class="abilityadjustmets">
-                            <b>Strength (STR)</b>
-                            <ul>
-                                <li>Melee Att/Dam: <span name="attr_strength_melee"></li>
-                                <li>Open Doors: <span name="attr_strength_open_doors"></span></li>
-                            </ul>
+                            <span class="common_label">Melee Att/Dam: </span><span class="common_value" name="attr_strength_melee"></span><br />
+                            <span class="common_label">Open Doors: </span><span class="common_value" name="attr_strength_open_doors"></span>
                         </td>
                     </tr>
                     <tr>
+                        <td><span class="ability_label">INT</span></td>
+                        <td><span name="attr_intelligence_curr" class="score_curr"></span></td>
                         <td>
-                            <div class="abilitycircle">
-                                <span name="attr_intelligence_curr" class="score_curr"></span>    
-                            </div>
-                        </td>
-                        <td class="abilityadjustmets">
-                            <b>Intelligence (INT)</b>
-                            <ul>
-                                <li>Spoken: <span name="attr_spoken_languages"></span></li>
-                                <li>Literacy: <span name="attr_literacy"></span></li>
-                            </ul>
+                            <span class="common_label">Spoken: </span><span class="common_value" name="attr_spoken_languages"></span><br />
+                            <span class="common_label">Literacy: </span><span class="common_value" name="attr_literacy"></span>
                         </td>
                     </tr>
                     <tr>
+                        <td><span class="ability_label">DEX</span></td>
+                        <td><span name="attr_dexterity_curr" class="score_curr"></span></td>
                         <td>
-                            <div class="abilitycircle">
-                                <span name="attr_dexterity_curr" class="score_curr"></span>    
-                            </div>
+                            <span class="common_label">AC Adj: <span class="common_value" name="attr_dexterity_ac"></span><br />
+                            <span class="common_label">Missile Adj: <span class="common_value" name="attr_dexterity_missile"></span><br />
+                            <span class="common_label">Initiative Adj: <span class="common_value" name="attr_dexterity_initiative"></span>
                         </td>
-                        <td class="abilityadjustmets">
-                            <b>Dexterity (DEX)</b>
-                            <ul>
-                                <li>AC Adj: <span name="attr_dexterity_ac"></span></li>
-                                <li>Missile Adj: <span name="attr_dexterity_missile"></span></li>
-                                <li>Initiative Adj: <span name="attr_dexterity_initiative"></span></li>
-                            </ul>
+                    </tr>
+                    
+                    <tr>
+                        <td><span class="ability_label">CON</span></td>
+                        <td><span name="attr_constitution_curr" class="score_curr"></span></td>
+                        <td>
+                            <span class="common_label">Hit Point Adj: </span><span class="common_value" name="attr_constitution_hp"></span>
                         </td>
                     </tr>
                     <tr>
+                        <td><span class="ability_label">WIS</span></td>
+                        <td><span name="attr_wisdom_curr" class="score_curr"></span></td>
                         <td>
-                            <div class="abilitycircle">
-                                <span name="attr_constitution_curr" class="score_curr"></span>    
-                            </div>
-                        </td>
-                        <td class="abilityadjustmets">
-                            <b>Constitution (CON)</b>
-                            <ul>
-                                <li>Hit Point Adj: <span name="attr_constitution_hp"></span></li>
-                            </ul>
+                            <span class="common_label">Magic Saves: </span><span class="common_value" name="attr_magic_saves"></span>
                         </td>
                     </tr>
                     <tr>
+                        <td><span class="ability_label">CHA</span></td>
+                        <td><span name="attr_charisma_curr" class="score_curr"></span></td>
                         <td>
-                            <div class="abilitycircle">
-                                <span name="attr_wisdom_curr" class="score_curr"></span>    
-                            </div>
-                        </td>
-                        <td class="abilityadjustmets">
-                            <b>Wisdom (WIS)</b>
-                            <ul>
-                                <li>Magic Saves: <span name="attr_magic_saves"></span></li>
-                            </ul> 
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="abilitycircle">
-                                <span name="attr_charisma_curr" class="score_curr"></span>    
-                            </div>
-                        </td>
-                        <td class="abilityadjustmets">
-                            <b>Charisma (CHA)</b>
-                            <ul>
-                                <li>NPC Reaction: <span name="attr_charisma_react"></span></li>
-                                <li>Max # of Retainers: <span name="attr_charisma_max"></span></li>
-                                <li>Retainers Loyalty: <span name="attr_charisma_loyalty"></span></li>
-                            </ul>
+                            <span class="common_label">Reaction: </span><span class="common_value" name="attr_charisma_react"></span><br />
+                            <span class="common_label">Max #: </span><span class="common_value" name="attr_charisma_max"></span><br />
+                            <span class="common_label">Loyalty: </span><span class="common_value" name="attr_charisma_loyalty"></span>
                         </td>
                     </tr>
                 </table>
-
-
+                <span class="section">Advancement</span>
+                <div class="standard">
+                    <span class="common_label">Current Experience Points: </span><span class="common_value"name="attr_current_xp"></span><br />
+                    <span class="common_label">Experience Points Goal: </span><span class="common_value"name="attr_xp_goal"></span><br />
+                    <span class="common_label">Experience Point Bonus: </span><span class="common_value"name="attr_xbonus"></span>
+                </div>
             </div>
             <div class="edit">
                 <span class="character_name" name="attr_character_name"></span>
@@ -139,46 +106,51 @@
                 </div>
                 <span class="section_white">Ability Scores</span>
                 <table>
-                        <tr>
-                            <td class="abilityheader">Ability</td>
-                            <td class="abilityheader">Score</td>
-                            <td class="abilityheader">Status<br>Effect +/-</td>
-                        </tr>
-                        <tr class="abilityeven">
-                            <td class="abilitycell">Strength (STR)</td>
-                            <td class="abilitycell"><input name="attr_strength" type="text" class="abilitycell abilityeven"></td>
-                            <td class="abilitycell"><input name="attr_strength_buff" type="text" class="abilitycell abilityeven"></td>
-                        </tr>
-                        <tr>
-                            <td class="abilitycell">Intelligence (INT)</td>
-                            <td class="abilitycell"><input name="attr_intelligence" type="text" class="abilitycell"></td>
-                            <td class="abilitycell"><input name="attr_intelligence_buff" type="text" class="abilitycell"></td>
-                        </tr>
-                        <tr class="abilityeven">
-                            <td class="abilitycell">Dexterity (DEX)</td>
-                            <td class="abilitycell"><input name="attr_dexterity" type="text" class="abilitycell abilityeven"></td>
-                            <td class="abilitycell"><input name="attr_dexterity_buff" type="text" class="abilitycell abilityeven"></td>
-                        </tr>
-                        <tr>
-                            <td class="abilitycell">Constitution (CON)</td>
-                            <td class="abilitycell"><input name="attr_constitution" type="text" class="abilitycell"></td>
-                            <td class="abilitycell"><input name="attr_constitution_buff" type="text" class="abilitycell"></td>
-                        </tr>
-                        <tr class="abilityeven">
-                            <td class="abilitycell">Wisdom (WIS)</td>
-                            <td class="abilitycell"><input name="attr_wisdom" type="text" class="abilitycell abilityeven"></td>
-                            <td class="abilitycell"><input name="attr_wisdom_buff" type="text" class="abilitycell abilityeven"></td>
-                        </tr>
-                        <tr>
-                            <td class="abilitycell">Charisma (CHA)</td>
-                            <td class="abilitycell"><input name="attr_charisma" type="text" class="abilitycell"></td>
-                            <td class="abilitycell"><input name="attr_charisma_buff" type="text" class="abilitycell"></td>
-                        </tr>
-                    </table>
+                    <tr>
+                        <td class="abilityheader">Ability</td>
+                        <td class="abilityheader">Score</td>
+                        <td class="abilityheader">Status +/-</td>
+                    </tr>
+                    <tr class="abilityeven">
+                        <td class="abilitycell">Strength (STR)</td>
+                        <td class="abilitycell"><input name="attr_strength" type="text" class="abilitycell abilityeven"></td>
+                        <td class="abilitycell"><input name="attr_strength_buff" type="text" class="abilitycell abilityeven"></td>
+                    </tr>
+                    <tr>
+                        <td class="abilitycell">Intelligence (INT)</td>
+                        <td class="abilitycell"><input name="attr_intelligence" type="text" class="abilitycell"></td>
+                        <td class="abilitycell"><input name="attr_intelligence_buff" type="text" class="abilitycell"></td>
+                    </tr>
+                    <tr class="abilityeven">
+                        <td class="abilitycell">Dexterity (DEX)</td>
+                        <td class="abilitycell"><input name="attr_dexterity" type="text" class="abilitycell abilityeven"></td>
+                        <td class="abilitycell"><input name="attr_dexterity_buff" type="text" class="abilitycell abilityeven"></td>
+                    </tr>
+                    <tr>
+                        <td class="abilitycell">Constitution (CON)</td>
+                        <td class="abilitycell"><input name="attr_constitution" type="text" class="abilitycell"></td>
+                        <td class="abilitycell"><input name="attr_constitution_buff" type="text" class="abilitycell"></td>
+                    </tr>
+                    <tr class="abilityeven">
+                        <td class="abilitycell">Wisdom (WIS)</td>
+                        <td class="abilitycell"><input name="attr_wisdom" type="text" class="abilitycell abilityeven"></td>
+                        <td class="abilitycell"><input name="attr_wisdom_buff" type="text" class="abilitycell abilityeven"></td>
+                    </tr>
+                    <tr>
+                        <td class="abilitycell">Charisma (CHA)</td>
+                        <td class="abilitycell"><input name="attr_charisma" type="text" class="abilitycell"></td>
+                        <td class="abilitycell"><input name="attr_charisma_buff" type="text" class="abilitycell"></td>
+                    </tr>
+                </table>
+                <span class="section">Advancement</span>
+                <div class="standard">
+                    <span class="label">Current Experience Points</span>
+                    <input name="attr_current_xp" type="text" class="input" value="0">
+                </div>
             </div>
         </div>
         <div class="column_b">
-            <input type="hidden" name="attr_edit_mode" class="edit_mode">
+            <input type="hidden" name="attr_edit_mode" class="edit_mode" value="1">
             <div class="play">
                 <div class="big_three">
                     <div class="ac">
@@ -195,100 +167,118 @@
                     </div>
                 </div>
                 <span class="section">Combat</span>
-                
-                                                <input class="thaco_on" type="text" name="attr_thaco_on" value="1">
-                <!--<div class="thaco_yes">-->
-                THAC0: <span name="attr_thaco"></span>
                 <table>
                     <tr>
-                        <td class="center border">&nbsp;9&nbsp;</td>
-                        <td class="center border">&nbsp;8&nbsp;</td>
-                        <td class="center border">&nbsp;7&nbsp;</td>
-                        <td class="center border">&nbsp;6&nbsp;</td>
-                        <td class="center border">&nbsp;5&nbsp;</td>
-                        <td class="center border">&nbsp;4&nbsp;</td>
-                        <td class="center border">&nbsp;3&nbsp;</td>
-                        <td class="center border">&nbsp;2&nbsp;</td>
-                        <td class="center border">&nbsp;1&nbsp;</td>
-                        <td class="center border">&nbsp;0&nbsp;</td>
-                        <td class="center border">-1&nbsp;</td>
-                        <td class="center border">-2&nbsp;</td>
-                        <td class="center border">-3&nbsp;</td>
+                        <td><div class="twenty"></div></td>
+                        <td><div class="attdam"></div></td>
+                        <td><div class="missle"></div></td>
+                        <td><div class="dex_ac"></div></td>
                     </tr>
                     <tr>
-                        <td class="center border"><span name="attr_acp9"></span></td>
-                        <td class="center border"><span name="attr_acp8"></span></td>
-                        <td class="center border"><span name="attr_acp7"></span></td>
-                        <td class="center border"><span name="attr_acp6"></span></td>
-                        <td class="center border"><span name="attr_acp5"></span></td>
-                        <td class="center border"><span name="attr_acp4"></span></td>
-                        <td class="center border"><span name="attr_acp3"></span></td>
-                        <td class="center border"><span name="attr_acp2"></span></td>
-                        <td class="center border"><span name="attr_acp1"></span></td>
-                        <td class="center border"><span name="attr_acp0"></span></td>
-                        <td class="center border"><span name="attr_acn1"></span></td>
-                        <td class="center border"><span name="attr_acn2"></span></td>
-                        <td class="center border"><span name="attr_acn3"></span></td>
+                        <td class="combatcell">
+                            <input class="thaco_on" type="hidden" name="attr_use_thaco" value="1">
+                            <div class="thaco">
+                                <span class="common_value" name="attr_thaco"></span><br>
+                                <span class="combat_label">THAC0</span>
+                            </div>
+                            <div class="attbo">
+                                <span class="common_value" name="attr_attack_bonus"></span><br>
+                                <span class="combat_label">Attack</span>
+                            </div>
+                        </td>
+                        <td class="combatcell">
+                            <span class="common_value" name="attr_strength_melee"></span><br>
+                            <span class="combat_label">Melee</span>
+                        </td>
+                        <td class="combatcell">
+                            <span class="common_value" name="attr_dexterity_missile"></span><br>
+                            <span class="combat_label">Missile</span>
+                        </td>
+                        <td class="combatcell">
+                            <span class="common_value" name="attr_dexterity_ac"></span><br>
+                            <span class="combat_label">AC Adj</span>
+                        </td>
                     </tr>
                 </table>
-                <!--</div>
-                <div class="thaco_no">-->
-                Attack Bonus: <span name="attr_attack_bonus"></span>
-                <!--</div>-->
             </div>
             <div class="edit">
-                                <input type="checkbox" name="attr_use_thaco" value="1" checked> Use THAC0<br />
+                <input type="checkbox" name="attr_use_thaco" value="1" checked> Use THAC0<br />
             </div>
         </div>
         <div class="column_c">
-            <input type="hidden" name="attr_edit_mode" class="edit_mode">
+            <input type="hidden" name="attr_edit_mode" class="edit_mode" value="1">
             <div class="play">
                 <span class="section">Saving Throws</span>
                 <table>
                     <tr>
                         <td><div class="save_d"></div></td>
-                        <td class="savecell"><span name="attr_save_d" class="save"></span></td>
+                        <td class="savecell"><span name="attr_save_d_curr" class="save"></span></td>
                         <td class="savelabel"><b>Death or Poison: </b>When targeted by a deathray or exposed to poison.</td>
                     </tr>
                     <tr>
                         <td><div class="save_w"></div></td>
-                        <td class="savecell"><span name="attr_save_w" class="save"></span></td>
+                        <td class="savecell"><span name="attr_save_w_curr" class="save"></span></td>
                         <td class="savelabel"><b>Wands: </b>When targeted by an effect from a magical wand.</td>
                     </tr>
                     <tr>
                         <td><div class="save_p"></div></td>
-                        <td class="savecell"><span name="attr_save_p" class="save"></span></td>
+                        <td class="savecell"><span name="attr_save_p_curr" class="save"></span></td>
                         <td class="savelabel"><b>Paralysis or Petrifcation: </b>Effect that paralyses or turns to stone.</td>
                     </tr>
                     <tr>
                         <td><div class="save_b"></div></td>
-                        <td class="savecell"><span name="attr_save_b" class="save"></span></td>
+                        <td class="savecell"><span name="attr_save_b_curr" class="save"></span></td>
                         <td class="savelabel"><b>Breath Attacks: </b>Breath of a dragon (or other monster with a breath attack).</td>
                     </tr>
                     <tr>
                         <td><div class="save_s"></div></td>
-                        <td class="savecell"><span name="attr_save_s" class="save"></span></td>
+                        <td class="savecell"><span name="attr_save_s_curr" class="save"></span></td>
                         <td class="savelabel"><b>Spells, Rods, or Staves: </b>Spell or an effect from a magical rod or staff.<br /></td>
                     </tr>
                 </table>
-                <span class="section">Advancement</span>
-                <b>Current Experience Points: </b><span name="attr_current_xp"></span><br />
-                <b>Experience Points Goal: </b><span name="attr_xp_goal"></span><br />
-                <b>Experience Point Bonus: </b><span name="attr_xbonus"></span><br />
             </div>
             <div class="edit">
-                <span class="label">Current Experience Points</span>
-                <input name="attr_current_xp" type="text" class="input" value="0">
+                <span class="section">Saving Throws</span>
+                <table>
+                    <tr>
+                        <td class="saveheader">Type</td>
+                        <td class="saveheader">Normal</td>
+                        <td class="saveheader">Status +/-</td>
+                    </tr>
+                    <tr class="saveeven">
+                        <td class="savelabel center">Death or Poison</td>
+                        <td class="savecell"><span name="attr_save_d"></span></td>
+                        <td class="savecell"><input name="attr_save_d_buff" type="text" class="savecell abilityeven"></td>
+                    </tr>
+                    <tr>
+                        <td class="savelabel center">Wands</td>
+                        <td class="savecell"><span name="attr_save_w"></span></td>
+                        <td class="savecell"><input name="attr_save_w_buff" type="text" class="savecell"></td>
+                    </tr>
+                    <tr class="saveeven">
+                        <td class="savelabel center">Paralysis or Petrifcation</td>
+                        <td class="savecell"><span name="attr_save_p"></span></td>
+                        <td class="savecell"><input name="attr_save_p_buff" type="text" class="savecell abilityeven"></td>
+                    </tr>
+                    <tr>
+                        <td class="savelabel center">Breath Attacks</td>
+                        <td class="savecell"><span name="attr_save_b"></span></td>
+                        <td class="savecell"><input name="attr_save_b_buff" type="text" class="savecell"></td>
+                    </tr>
+                    <tr class="saveeven">
+                        <td class="savelabel center">Spells, Rods, or Staves</td>
+                        <td class="savecell"><span name="attr_save_s"></span></td>
+                        <td class="savecell"><input name="attr_save_s_buff" type="text" class="savecell abilityeven"></td>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>
-    
     <div class="nonplr">
-    d
+        nonplr
     </div>
     
 </div>
-
 
 <script type="text/worker">
     var data = data||{
@@ -297,11 +287,12 @@
         abil_curr: ["strength_curr", "intelligence_curr", "wisdom_curr", "dexterity_curr", "constitution_curr", "charisma_curr"],
         abil_buff: ["strength_buff", "intelligence_buff", "wisdom_buff", "dexterity_buff", "constitution_buff", "charisma_buff"],
         classData: ["title", "character_name", "alignment", "class", "level", "current_xp", "requirements", "class_notes"],
-        coinsData: ["pp_coins", "gp_coins", "ep_coins", "sp_coins", "cp_coins", "coins_in_gold", "weight_of_coins"],
+        save_buff: ["save_d_buff", "save_w_buff", "save_p_buff", "save_b_buff", "save_s_buff"],
+        /*coinsData: ["pp_coins", "gp_coins", "ep_coins", "sp_coins", "cp_coins", "coins_in_gold", "weight_of_coins"],*/
         statadj: {
             bonus:["-3","-2","-1","+0","+1","+2","+3"],
             doors:["1-in-6","1-in-6","1-in-6","2-in-6","3-in-6","4-in-6","5-in-6"],
-            speak:["Native (broken speech)","Native","Native","Native","Native + 1 additional","Native + 2 additional","Native + 3 additional"],
+            speak:["Broken Speech","Native","Native","Native","+ 1 add","+ 2 add","+ 3 add"],
             reads:["Illiterate","Illiterate","Basic","Literate","Literate","Literate","Literate"],
             react:["-2","-1","-1","+0","+1","+1","+2"]   
         },
@@ -580,23 +571,38 @@
             r=r+"change:"+e+" ";
             data.attrs.push(e);
         });
-        data.coinsData.forEach(e=>{
+        data.save_buff.forEach(e=>{
             r=r+"change:"+e+" ";
             data.attrs.push(e);
         });
+        /*data.coinsData.forEach(e=>{
+            r=r+"change:"+e+" ";
+            data.attrs.push(e);
+        });*/
         return r;
     };
     
     const getInt=(x)=>Number(x)||~~x;
     
-    const capitalize=(s)=> s.charAt(0).toLocaleUpperCase()+s.substr(1);
-
+    const statIndex=(n)=>{
+        n=getInt(n);
+        return (n<4)?0:(n>3&&n<6)?1:(n>5&&n<9)?2:(n>8&&n<13)?3:(n>12&&n<16)?4:(n>16&&n<18)?5:6;
+    };
+    
     const bound=(value,lower,upper,integer)=>{
         let v = getInt(value),
             l = getInt(lower),
             u = getInt(upper);
         return (integer) ? ~~(Math.max(Math.min(v,u),l)) : Math.max(Math.min(v,u),l);
     };
+    
+    const requirements=(req, stat)=>{
+        return (req!="None")
+            ? "Minimum "+(capitalize(req))+" 9"+((stat>8) ? "" : " \u26A0")
+            : "None";
+    };
+
+    const capitalize=(s)=> s.charAt(0).toLocaleUpperCase()+s.substr(1);
     
     const calXpBonus=(props)=>{
         let r="+0%";
@@ -612,13 +618,17 @@
             break;
         }
         return r;
-    };
+    };    
     
-    const requirements=(req, stat)=>{
-        return (req!="None")
-            ? "Minimum "+(capitalize(req))+" 9"+((stat>8) ? "" : " \u26A0")
-            : "None";
-    };
+    
+    /*
+    
+
+    
+    
+
+    
+    
     
     const sortCoins=(coins)=>{
         let r={
@@ -644,20 +654,18 @@
         return r;
     };
     
-    const statIndex=(n)=>{
-        n=getInt(n);
-        return (n<4)?0:(n>3&&n<6)?1:(n>5&&n<9)?2:(n>8&&n<13)?3:(n>12&&n<16)?4:(n>16&&n<18)?5:6;
-    };
+
+    */
 
     const mainScript=(v)=>{
         let cls=data[v.class.replace(/-/g,'')];
-        let coins=sortCoins([v.pp_coins,v.gp_coins,v.ep_coins,v.sp_coins,v.cp_coins]);
-        v.strength_curr = getInt(v.strength) + getInt(v.strength_buff);
-        v.intelligence_curr = getInt(v.intelligence) + getInt(v.intelligence_buff);
-        v.wisdom_curr = getInt(v.wisdom) + getInt(v.wisdom_buff);
-        v.dexterity_curr = getInt(v.dexterity) + getInt(v.dexterity_buff);
-        v.constitution_curr = getInt(v.constitution) + getInt(v.constitution_buff);
-        v.charisma_curr = getInt(v.charisma) + getInt(v.charisma_buff);
+        
+        ///let coins=sortCoins([v.pp_coins,v.gp_coins,v.ep_coins,v.sp_coins,v.cp_coins]);
+        
+        data.abil_curr.forEach((e,i)=>{
+            v[e]=getInt(v[data.abilities[i]]) + getInt(v[data.abil_buff[i]]);
+        });
+        
         let statIdx = {
             str: statIndex(v.strength_curr),
             int: statIndex(v.intelligence_curr),
@@ -666,40 +674,6 @@
             con: statIndex(v.constitution_curr),
             cha: statIndex(v.charisma_curr)
         };
-        
-        v.level=bound(v.level,1,cls.maxlvl,true);
-        v.hit_dice=cls.hdprog[v.level - 1];
-        v.current_xp = v.current_xp ? getInt(v.current_xp.replace(/,/g,'')).toLocaleString() : 0;
-        v.xp_goal=cls.xpgoal[v.level - 1].toLocaleString();
-        v.xbonus=calXpBonus({
-            type: cls.xpmods.type,
-            pr1: v[cls.xpmods.pr1],
-            pr2: (cls.xpmods.pr2=="none") ? "none" : v[cls.xpmods.pr2]
-        });
-        v.requirements = requirements(cls.requir,v[cls.requir]||0);
-        v.prime_requisite=capitalize(cls.xpmods.pr1) + ((cls.xpmods.pr2=="none") ? "" : (" and "+capitalize(cls.xpmods.pr2)));
-        v.restrictions_armour=cls.armour;
-        v.restrictions_weapons=cls.weapon;
-        v.starting_languages=cls.langes;
-        v.class_notes=cls.classNote;
-        v.vision=cls.vision;
-        v.listen=cls.listen;
-        v.secret=cls.secret;
-        v.rmtrap=cls.rmtrap;
-        
-        v.pp_coins = coins.coinvalues[0].toLocaleString();
-        v.gp_coins = coins.coinvalues[1].toLocaleString();
-        v.ep_coins = coins.coinvalues[2].toLocaleString();
-        v.sp_coins = coins.coinvalues[3].toLocaleString();
-        v.cp_coins = coins.coinvalues[4].toLocaleString();
-        v.weight_of_coins=coins.weight;
-        v.coins_in_gold=coins.value;
-        
-        v.save_d=cls.saves[v.level - 1][0];
-        v.save_w=cls.saves[v.level - 1][1];
-        v.save_p=cls.saves[v.level - 1][2];
-        v.save_b=cls.saves[v.level - 1][3];
-        v.save_s=cls.saves[v.level - 1][4];
         
         v.strength_melee=data.statadj.bonus[statIdx.str];
         v.strength_open_doors=data.statadj.doors[statIdx.str];
@@ -713,6 +687,34 @@
         v.charisma_react=data.statadj.react[statIdx.cha];
         v.charisma_max=statIdx.cha + 1;
         v.charisma_loyalty=statIdx.cha + 4;
+        
+        v.level=bound(v.level,1,cls.maxlvl,true);
+        v.hit_dice=cls.hdprog[v.level - 1];
+        v.requirements = requirements(cls.requir,v[cls.requir]||0);
+        v.prime_requisite=capitalize(cls.xpmods.pr1) + ((cls.xpmods.pr2=="none") ? "" : (" and "+capitalize(cls.xpmods.pr2)));
+        v.restrictions_armour=cls.armour;
+        v.restrictions_weapons=cls.weapon;
+        v.starting_languages=cls.langes;
+
+        v.current_xp = v.current_xp ? getInt(v.current_xp.replace(/,/g,'')).toLocaleString() : 0;
+        v.xp_goal=cls.xpgoal[v.level - 1].toLocaleString();
+        v.xbonus=calXpBonus({
+            type: cls.xpmods.type,
+            pr1: v[cls.xpmods.pr1],
+            pr2: (cls.xpmods.pr2=="none") ? "none" : v[cls.xpmods.pr2]
+        });
+        
+        v.save_d=cls.saves[v.level - 1][0];
+        v.save_w=cls.saves[v.level - 1][1];
+        v.save_p=cls.saves[v.level - 1][2];
+        v.save_b=cls.saves[v.level - 1][3];
+        v.save_s=cls.saves[v.level - 1][4];
+        
+        v.save_d_curr=getInt(v.save_d) + getInt(v.save_d_buff);
+        v.save_w_curr=getInt(v.save_w) + getInt(v.save_w_buff);
+        v.save_p_curr=getInt(v.save_p) + getInt(v.save_p_buff);
+        v.save_b_curr=getInt(v.save_b) + getInt(v.save_b_buff);
+        v.save_s_curr=getInt(v.save_s) + getInt(v.save_s_buff);
         
         v.thaco=cls.thaco[v.level - 1];
         v.acp9=v.thaco - 9;
@@ -729,629 +731,8 @@
         v.acn2=v.thaco + 2;
         v.acn3=v.thaco + 3;
         v.attack_bonus=cls.attak[v.level - 1];
-        v.thaco_on=v.use_thaco;
-
-        setAttrs(v);
-    };
-
-    on(changString(),function(){
-        getAttrs(data.attrs,function(v){
-            mainScript(v);
-        });
-    });
-
-</script>
-
-<!--
-
-
-<span class="label">Strength (STR)</span>
-                        <input name="attr_strength" type="text" class="input">
-                        <span class="label">Dexterity (DEX)</span>
-                        <input name="attr_dexterity" type="text" class="input">
-                        <span class="label">Intelligence (INT)</span>
-                        <input name="attr_intelligence" type="text" class="input">
-                        <span class="label">Constitution (CON)</span>
-                        <input name="attr_constitution" type="text" class="input">
-                        <span class="label">Wisdom (WIS)</span>
-                        <input name="attr_wisdom" type="text" class="input">
-                        <span class="label">Charisma (CHA)</span>
-                        <input name="attr_charisma" type="text" class="input">
-                    </div>
-                    <div class="editabilitybuffs">
-                        <span class="label">STR status effect +/-</span>
-                        <input name="attr_strength_buff" type="text" class="input">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="wrap">
-    <div class="type">PC<input type="checkbox" name="attr_sheet_type" class="type" value="1" checked></div>
-    <input type="hidden" name="attr_sheet_type" value="1" class="showtype">
-    
-    <div class="player">
-        <div class="class">
-            <input type="checkbox" class="edit_mode"><span></span>
-            <div class="play">
-                <span class="title" name="attr_title"></span>
-                <span class="character_name" name="attr_character_name"></span>
-                <span class="alignment" name="attr_alignment"></span>
-                <div class="features">
-                    <b><span name="attr_class"></span> </b>( Level: <span name="attr_level"></span>, Hit Dice: <span name="attr_hit_dice"></span> )<br />
-                    <b>Current Experience Points: </b><span name="attr_current_xp"></span><br />
-                    <b>Experience Points Goal: </b><span name="attr_xp_goal"></span><br />
-                    <b>Experience Point Bonus: </b><span name="attr_xbonus"></span><br />
-                    <b>Requirements: </b><span name="attr_requirements"></span><br />
-                    <b>Prime Requisite: </b><span name="attr_prime_requisite"></span><br />
-                    <b>Armour: </b><span name="attr_restrictions_armour"></span><br />
-                    <b>Weapons: </b><span name="attr_restrictions_weapons"></span><br />
-                    <b>Native Languages: </b><span name="attr_starting_languages"></span><br />
-                    <b>Spoken Languages: </b><span name="attr_spoken_languages"></span><br />
-                    <b>Literacy: </b><span name="attr_literacy"></span><br />
-                    <b>Addtional lange: </b>BASED ON INT<br />
-                </div>
-                <span class="section_white">Ability Scores</span>
-                <div class="abilities">
-                    <div class="abilityScore">
-                        <div class="abilitycircle">
-                            <span name="attr_strength_curr" class="score_curr"></span>    
-                        </div>
-                        <div class="abilitycircle">
-                            <span name="attr_intelligence_curr" class="score_curr"></span>      
-                        </div>
-                        <div class="abilitycircle">
-                            <span name="attr_dexterity_curr" class="score_curr"></span>  
-                        </div>
-                        <div class="abilitycircle">
-                            <span name="attr_constitution_curr" class="score_curr"></span>    
-                        </div>
-                        <div class="abilitycircle">
-                            <span name="attr_wisdom_curr" class="score_curr"></span>    
-                        </div>
-                        <div class="abilitycircle">
-                            <span name="attr_charisma_curr" class="score_curr"></span>    
-                        </div>
-                    </div>
-                    <div class="abilityLabel">
-                        <div class="abilityMods">
-                            <span class="section_white">Strength (STR)</span>
-                            <ul>
-                                <li>Melee Att/Dam: <span name="attr_strength_melee"></li>
-                                <li>Open Doors: <span name="attr_strength_open_doors"></span></li>
-                            </ul>
-                        </div>
-                        <div class="abilityMods">
-                            <span class="section_white">Intelligence (INT)</span>
-                            <ul>
-                                <li>Spoken Languages: <span name="attr_spoken_languages"></span></li>
-                                <li>Literacy: <span name="attr_literacy"></span></li>
-                            </ul>
-                        </div>
-                        <div class="abilityMods">
-                            <span class="section_white">Dexterity (DEX)</span>
-                            <ul>
-                                <li>AC Adj: <span name="attr_dexterity_ac"></span></li>
-                                <li>Missile Adj: <span name="attr_dexterity_missile"></span></li>
-                                <li>Initiative Adj: <span name="attr_dexterity_initiative"></span></li>
-                            </ul>
-                        </div>
-                        <div class="abilityMods">
-                            <span class="section_white">Constitution (CON)</span>
-                            <ul>
-                                <li>Hit Point Adjustment: <span name="attr_constitution_hp"></span></li>
-                            </ul>
-                        </div>
-                        <div class="abilityMods">
-                            <span class="section_white">Wisdom (WIS)</span>
-                            <ul>
-                                <li>Magic Saves: <span name="attr_magic_saves"></span></li>
-                            </ul> 
-                        </div>
-                        <div class="abilityMods">
-                            <span class="section_white">Charisma (CHA)</span>
-                            <ul>
-                                <li>NPC Reaction: <span name="attr_charisma_react"></span></li>
-                                <li>Max # of Retainers: <span name="attr_charisma_max"></span></li>
-                                <li>Retainers Loyalty: <span name="attr_charisma_loyalty"></span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="edit">
-                <div class="features">
-                    <span class="label">Level Title</span>
-                    <input name="attr_title" type="text" class="input">
-                    <span class="label">Character Name</span>
-                    <input name="attr_character_name" type="text" class="input">
-                    <span class="label">Alignment</span>
-                    <select name="attr_alignment" class="input">
-                        <option value="the Lawful">Lawful</option>
-                        <option value="the Neutral">Neutral</option>
-                        <option value="the Chaotic">Chaotic</option>
-                    </select>
-                    <span class="label">Class</span>
-                    <select name="attr_class" class="input">
-                        <option value="Cleric">Cleric</option>
-                        <option value="Dwarf">Dwarf</option>
-                        <option value="Elf">Elf</option>
-                        <option value="Fighter">Fighter</option>
-                        <option value="Halfling">Halfling</option>
-                        <option value="Magic-User">Magic-User</option>
-                        <option value="Thief">Thief</option>
-                    </select>
-                    <span class="label">Level</span>
-                    <input name="attr_level" type="text" class="input" value="1">
-                    <span class="label">Current Experience Points</span>
-                    <input name="attr_current_xp" type="text" class="input" value="0">
-                </div>
-                <span class="section_white">Ability Scores</span>
-                <div class="editabilites">
-                    <div class="editabilityscores">
-                        <span class="label">Strength (STR)</span>
-                        <input name="attr_strength" type="text" class="input">
-                        <span class="label">Dexterity (DEX)</span>
-                        <input name="attr_dexterity" type="text" class="input">
-                        <span class="label">Intelligence (INT)</span>
-                        <input name="attr_intelligence" type="text" class="input">
-                        <span class="label">Constitution (CON)</span>
-                        <input name="attr_constitution" type="text" class="input">
-                        <span class="label">Wisdom (WIS)</span>
-                        <input name="attr_wisdom" type="text" class="input">
-                        <span class="label">Charisma (CHA)</span>
-                        <input name="attr_charisma" type="text" class="input">
-                    </div>
-                    <div class="editabilitybuffs">
-                        <span class="label">STR status effect +/-</span>
-                        <input name="attr_strength_buff" type="text" class="input">
-                        <span class="label">DEX status effect +/-</span>
-                        <input name="attr_dexterity_buff" type="text" class="input">
-                        <span class="label">INT status effect +/-</span>
-                        <input name="attr_intelligence_buff" type="text" class="input">
-                        <span class="label">CON status effect +/-</span>
-                        <input name="attr_constitution_buff" type="text" class="input">
-                        <span class="label">WIS status effect +/-</span>
-                        <input name="attr_wisdom_buff" type="text" class="input">
-                        <span class="label">CHA status effect +/-</span>
-                        <input name="attr_charisma_buff" type="text" class="input">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="combt">
-            <input type="checkbox" class="edit_mode"><span></span>
-            <div class="play">
-                combt play
-            </div>
-            <div class="edit">
-                combt edit   
-            </div>
-        </div>
-        <div class="stats">
-            <input type="checkbox" class="edit_mode"><span></span>
-            <div class="play">
-                stats play
-            </div>
-            <div class="edit">
-                stats edit   
-            </div>
-        </div>
-    </div>
-    
-    <div class="nonplr">
-    d
-    </div>
-    
-</div>
-
-<script type="text/worker">
-    var data = data||{
-        attrs: [],
-        abilities: ["strength", "intelligence", "wisdom", "dexterity", "constitution", "charisma"],
-        abil_curr: ["strength_curr", "intelligence_curr", "wisdom_curr", "dexterity_curr", "constitution_curr", "charisma_curr"],
-        abil_buff: ["strength_buff", "intelligence_buff", "wisdom_buff", "dexterity_buff", "constitution_buff", "charisma_buff"],
-        classData: ["title", "character_name", "alignment", "class", "level", "current_xp", "requirements", "class_notes"],
-        coinsData: ["pp_coins", "gp_coins", "ep_coins", "sp_coins", "cp_coins", "coins_in_gold", "weight_of_coins"],
-        statadj: {
-            bonus:["-3","-2","-1","+0","+1","+2","+3"],
-            doors:["1-in-6","1-in-6","1-in-6","2-in-6","3-in-6","4-in-6","5-in-6"],
-            speak:["Native (broken speech)","Native","Native","Native","Native + 1 additional","Native + 2 additional","Native + 3 additional"],
-            reads:["Illiterate","Illiterate","Basic","Literate","Literate","Literate","Literate"],
-            react:["-2","-1","-1","+0","+1","+1","+2"]   
-        },
-        Cleric: {
-            requir: "None",
-            maxlvl: 14,
-            xpgoal: [1500,3000,6000,12000,25000,50000,100000,200000,300000,400000,500000,600000,700000,"NA"],
-            htdice: "6",
-            hdprog: ["1d6","2d6","3d6","4d6","5d6","6d6","7d6","8d6","9d6","9d6+1*","9d6+2*","9d6+3*","9d6+4*","9d6+5*"],
-            thaco: [19,19,19,19,17,17,17,17,14,14,14,14,12,12],
-            attak: [0,0,0,0,2,2,2,2,5,5,5,5,7,7],
-            saves: [    
-                    [11,12,14,16,15],
-                    [11,12,14,16,15],
-                    [11,12,14,16,15],
-                    [11,12,14,16,15],
-                    [9,10,12,14,12],
-                    [9,10,12,14,12],
-                    [9,10,12,14,12],
-                    [9,10,12,14,12],
-                    [6,7,9,11,9],
-                    [6,7,9,11,9],
-                    [6,7,9,11,9],
-                    [6,7,9,11,9],
-                    [3,5,7,8,7],
-                    [3,5,7,8,7]
-                ],
-            armour: "Any, including shields",
-            weapon: "Any blunt weapons",
-            langes: "Alignment, Common",
-            vision: "Normal",
-            listen: "1 in 6",
-            secret: "1 in 6",
-            rmtrap: "1 in 6",
-            xpmods: { 
-                type: 1,
-                pr1: "wisdom",
-                pr2: "none"
-            },
-            classNote: "Clerics are adventurers who have sworn to serve a deity. They are trained for battle and channel the power of their deity."
-        },
-        Dwarf: {
-            requir: "constitution",
-            maxlvl: 12,
-            xpgoal: [2200,4400,8800,17000,35000,70000,140000,270000,400000,530000,660000,"NA"],
-            htdice: "8",
-            hdprog: ["1d8","2d8","3d8","4d8","5d8","6d8","7d8","8d8","9d8","9d8+3*","9d8+6*","9d8+9*"],
-            thaco: [19,19,19,17,17,17,14,14,14,12,12,12],
-            attak: [0,0,0,2,2,2,5,5,5,7,7,7],
-            saves: [    
-                    [8,9,10,13,12],
-                    [8,9,10,13,12],
-                    [8,9,10,13,12],
-                    [6,7,8,10,10],
-                    [6,7,8,10,10],
-                    [6,7,8,10,10],
-                    [4,5,6,7,8],
-                    [4,5,6,7,8],
-                    [4,5,6,7,8],
-                    [2,3,4,4,6],
-                    [2,3,4,4,6],
-                    [2,3,4,4,6]
-                ],
-            armour: "Any, including shields",
-            weapon: "Small or normal sized",
-            langes: "Alignment, Common, Dwarvish, Gnomish, Goblin, Kobold",
-            vision: "Infravision",
-            listen: "2 in 6",
-            secret: "1 in 6",
-            rmtrap: "2 in 6",
-            xpmods: { 
-                type: 1,
-                pr1: "strength",
-                pr2: "none"
-            },
-            classNote: "Dwarves are stout, bearded demihumans, about 4’ tall and weighing about 150 pounds. Dwarves typically live underground and love fine crafsmanship, gold, hearty food, and strong drink. They have skin, hair, and eye colours in earth tones. Dwarves are known for their stubbornness and practicality. They are a hardy people and have a strong resistance to magic, as refected in their saving throws."
-        },
-        Elf: {
-            requir: "intelligence",
-            maxlvl: 10,
-            xpgoal: [4000,8000,16000,32000,64000,120000,250000,400000,600000,"NA"],
-            htdice: "6",
-            hdprog: ["1d6","2d6","3d6","4d6","5d6","6d6","7d6","8d6","9d6","9d6+2*"],
-            thaco: [19,19,19,17,17,17,14,14,14,12],
-            attak: [0,0,0,2,2,2,5,5,5,7],
-            saves: [    
-                    [12,13,13,15,15],	
-                    [12,13,13,15,15],	
-                    [12,13,13,15,15],	
-                    [10,11,11,13,12],	
-                    [10,11,11,13,12],	
-                    [10,11,11,13,12],	
-                    [8,9,9,10,10],	
-                    [8,9,9,10,10],	
-                    [8,9,9,10,10],	
-                    [6,7,8,8,8]	
-                ],
-            armour: "Any, including shields",
-            weapon: "Any",
-            langes: "Alignment, Common, Elvish, Gnoll, Hobgoblin, Orcish",
-            vision: "Infravision",
-            listen: "2 in 6",
-            secret: "2 in 6",
-            rmtrap: "1 in 6",
-            xpmods: { 
-                type: 2,
-                pr1: "intelligence",
-                pr2: "strength"
-            },
-            classNote: "Elves are slender, fey demihumans with pointed ears. They typically weigh about 120 pounds and are between 5 and 5½ feet tall. Elves are seldom met in human settlements, preferring to feast and make merry in the woods. If crossed, they are dangerous enemies, as they are masters of both sword and spell. Elves are fascinatedby spells and beautifully constructed magic items and love to collect both."
-        },
-        Fighter: {
-            requir: "None",
-            maxlvl: 14,
-            xpgoal: [2000,4000,8000,16000,32000,64000,120000,240000,360000,480000,600000,720000,840000,"NA"],
-            htdice: "8",
-            hdprog: ["1d8","2d8","3d8","4d8","5d8","6d8","7d8","8d8","9d8","9d8+2*","9d8+4*","9d8+6*","9d8+8*","9d8+10*"],
-            thaco: [19,19,19,17,17,17,14,14,14,12,12,12,10,10],
-            attak: [0,0,0,2,2,2,5,5,5,7,7,7,9,9],
-            saves: [  
-                    [12,13,14,15,16],
-                    [12,13,14,15,16],
-                    [12,13,14,15,16],
-                    [10,11,12,13,14],
-                    [10,11,12,13,14],
-                    [10,11,12,13,14],
-                    [8,9,10,10,12],
-                    [8,9,10,10,12],
-                    [8,9,10,10,12],
-                    [6,7,8,8,10],
-                    [6,7,8,8,10],
-                    [6,7,8,8,10],
-                    [4,5,6,5,8],
-                    [4,5,6,5,8]
-                ],
-            armour: "Any, including shields",
-            weapon: "Any",
-            langes: "Alignment, Common",
-            vision: "Normal",
-            listen: "1 in 6",
-            secret: "1 in 6",
-            rmtrap: "1 in 6",
-            xpmods: { 
-                type: 1,
-                pr1: "strength",
-                pr2: "none"
-            },
-            classNote: "Fighters are adventurers dedicated to mastering the arts of combat and war. In a group of adventurers, the role of fighters is to battle monsters and to defend other characters."
-        },
-        Halfling: {
-            requir: "constitution",
-            maxlvl: 8,
-            xpgoal: [2000,4000,8000,16000,32000,64000,120000,"NA"],
-            htdice: "6",
-            hdprog: ["1d6","2d6","3d6","4d6","5d6","6d6","7d6","8d6"],
-            thaco: [19,19,19,17,17,17,14,14],
-            attak: [0,0,0,2,2,2,5,5],
-            saves: [    
-                    [8,9,10,13,12],
-                    [8,9,10,13,12],
-                    [8,9,10,13,12],
-                    [6,7,8,10,10],
-                    [6,7,8,10,10],
-                    [6,7,8,10,10],
-                    [4,5,6,7,8],
-                    [4,5,6,7,8]
-                ],
-            armour: "Any appropriate to size, including shields",
-            weapon: "Any appropriate to size",
-            langes: "Alignment, Common, Halfling",
-            vision: "Normal",
-            listen: "2 in 6",
-            secret: "1 in 6",
-            rmtrap: "1 in 6",
-            xpmods: { 
-                type: 3,
-                pr1: "dexterity",
-                pr2: "strength"
-            },
-            classNote: "Halfings are small, rotund demihumans with furry feet and curly hair. They weigh about 60 pounds and are around 3’tall. Halfings are a friendly and welcoming folk. Above all, they love the comforts of home and are not known for their bravery. Halfings who gain treasure through adventuring will ofen use their wealth in pursuit of a quiet, comfortable life."
-        },
-        MagicUser: {
-            requir: "None",
-            maxlvl: 14,
-            xpgoal: [2500,5000,10000,20000,40000,80000,150000,300000,450000,600000,750000,900000,1050000,"NA"],
-            htdice: "4",
-            hdprog: ["1d4","2d4","3d4","4d4","5d4","6d4","7d4","8d4","9d4","9d4+1*","9d4+2*","9d4+3*","9d4+4*","9d4+5*"],
-            thaco: [19,19,19,19,19,17,17,17,17,17,14,14,14,14],
-            attak: [0,0,0,0,0,2,2,2,2,2,5,5,5,5],
-            saves: [     
-                    [13,14,13,16,15],
-                    [13,14,13,16,15],
-                    [13,14,13,16,15],
-                    [13,14,13,16,15],
-                    [13,14,13,16,15],
-                    [11,12,11,14,12],
-                    [11,12,11,14,12],
-                    [11,12,11,14,12],
-                    [11,12,11,14,12],
-                    [11,12,11,14,12],
-                    [8,9,8,11,8], 
-                    [8,9,8,11,8], 
-                    [8,9,8,11,8], 
-                    [8,9,8,11,8] 
-                ],
-            armour: "None",
-            weapon: "Dagger",
-            langes: "Alignment, Common",
-            vision: "Normal",
-            listen: "1 in 6",
-            secret: "1 in 6",
-            rmtrap: "1 in 6",
-            xpmods: { 
-                type: 1,
-                pr1: "intelligence",
-                pr2: "none"
-            },
-            classNote: "Magic-users are adventurers whose study of arcane secrets has taught them how to cast spells. Magic-users are able to cast a greater number of increasingly powerful spells as they advance in level."
-        },
-        Thief: {
-            requir: "None",
-            maxlvl: 14,
-            xpgoal: [1200,2400,4800,9600,20000,40000,80000,160000,280000,400000,520000,640000,760000,"NA"],
-            htdice: "4",
-            hdprog: ["1d4","2d4","3d4","4d4","5d4","6d4","7d4","8d4","9d4","9d4+2*","9d4+4*","9d4+6*","9d4+8*","9d4+10*"],
-            thaco: [19,19,19,19,17,17,17,17,14,14,14,14,12,12],
-            attak: [0,0,0,0,2,2,2,2,5,5,5,5,7,7],
-            saves: [    
-                    [13,14,13,16,15],
-                    [13,14,13,16,15],
-                    [13,14,13,16,15],
-                    [13,14,13,16,15],
-                    [12,13,11,14,13],
-                    [12,13,11,14,13],
-                    [12,13,11,14,13],
-                    [12,13,11,14,13],
-                    [10,11,9,12,10],
-                    [10,11,9,12,10],
-                    [10,11,9,12,10],
-                    [10,11,9,12,10],
-                    [8,9,7,10,8],
-                    [8,9,7,10,8]
-                ],
-            armour: "Leather, no shields",
-            weapon: "Any",
-            langes: "Alignment, Common",
-            vision: "Normal",
-            listen: "Special",
-            secret: "1 in 6",
-            rmtrap: "1 in 6",
-            xpmods: { 
-                type: 1,
-                pr1: "dexterity",
-                pr2: "none"
-            },
-            classNote: "Thieves are adventurers who live by their skills of deception and stealth. Their range of unique skills makes them very handy companions in adventures. However, thieves are not always to be trusted."
-        }
-    };
-    
-    var changString=()=>{
-        let r = "";
-        data.attrs = [];
-        data.abilities.forEach(e=>{
-            r=r+"change:"+e+" ";
-            data.attrs.push(e);
-        });
-        data.abil_curr.forEach(e=>{
-            r=r+"change:"+e+" ";
-            data.attrs.push(e);
-        });
-        data.abil_buff.forEach(e=>{
-            r=r+"change:"+e+" ";
-            data.attrs.push(e);
-        });
-        data.classData.forEach(e=>{
-            r=r+"change:"+e+" ";
-            data.attrs.push(e);
-        });
-        data.coinsData.forEach(e=>{
-            r=r+"change:"+e+" ";
-            data.attrs.push(e);
-        });
-        return r;
-    };
-    
-    const getInt=(x)=>Number(x)||~~x;
-    
-    const capitalize=(s)=> s.charAt(0).toLocaleUpperCase()+s.substr(1);
-
-    const bound=(value,lower,upper,integer)=>{
-        let v = getInt(value),
-            l = getInt(lower),
-            u = getInt(upper);
-        return (integer) ? ~~(Math.max(Math.min(v,u),l)) : Math.max(Math.min(v,u),l);
-    };
-    
-    const calXpBonus=(props)=>{
-        let r="+0%";
-        switch(props.type){
-            case 1:
-                r=(props.pr1<6)?"-20%":(props.pr1>5&&props.pr1<9)?"-10%":(props.pr1>12&&props.pr1<16)?"+5%":(props.pr1>15)?"+10%":r;
-            break;
-            case 2:
-                r=(props.pr1>15&&props.pr2>12)?"+10%":(props.pr1>12&&props.pr2>12)?"+5%":r;
-            break;
-            case 3:
-                r=(props.pr1>12&&props.pr2>12)?"+10%":(props.pr1>12||props.pr2>12)?"+5%":r;
-            break;
-        }
-        return r;
-    };
-    
-    const requirements=(req, stat)=>{
-        return (req!="None")
-            ? "Minimum "+(capitalize(req))+" 9"+((stat>8) ? "" : " \u26A0")
-            : "None";
-    };
-    
-    const sortCoins=(coins)=>{
-        let r={
-            coinvalues:[],
-            weight: 0,
-            value: ""
-        };
-        coins.forEach((e,i)=>{
-            coins[i]=e ? getInt(e.replace(/,/g,'')) : 0;
-            r.coinvalues.push(coins[i].toLocaleString());
-            r.weight=r.weight+coins[i];
-        });
-        r.weight=r.weight.toLocaleString()+"cn";
-        coins[0]=getInt(coins[0])*5;
-        coins[2]=getInt(coins[2])/parseFloat(2);
-        coins[3]=getInt(coins[3])/parseFloat(10);
-        coins[4]=getInt(coins[4])/parseFloat(100);
-        let gp=getInt(coins[1])+coins[0]+coins[2]+coins[3]+coins[4];
-        let cp=(gp%1);
-        gp=Math.round(gp-cp);
-        cp=Math.round(cp*100);
-        r.value=gp+"gp & "+cp+"cp";
-        return r;
-    };
-    
-    const statIndex=(n)=>{
-        n=getInt(n);
-        return (n<4)?0:(n>3&&n<6)?1:(n>5&&n<9)?2:(n>8&&n<13)?3:(n>12&&n<16)?4:(n>16&&n<18)?5:6;
-    };
-
-    const mainScript=(v)=>{
-        let cls=data[v.class.replace(/-/g,'')];
-        let coins=sortCoins([v.pp_coins,v.gp_coins,v.ep_coins,v.sp_coins,v.cp_coins]);
-        v.strength_curr = getInt(v.strength) + getInt(v.strength_buff);
-        v.intelligence_curr = getInt(v.intelligence) + getInt(v.intelligence_buff);
-        v.wisdom_curr = getInt(v.wisdom) + getInt(v.wisdom_buff);
-        v.dexterity_curr = getInt(v.dexterity) + getInt(v.dexterity_buff);
-        v.constitution_curr = getInt(v.constitution) + getInt(v.constitution_buff);
-        v.charisma_curr = getInt(v.charisma) + getInt(v.charisma_buff);
-        let statIdx = {
-            str: statIndex(v.strength_curr),
-            int: statIndex(v.intelligence_curr),
-            wis: statIndex(v.wisdom_curr),
-            dex: statIndex(v.dexterity_curr),
-            con: statIndex(v.constitution_curr),
-            cha: statIndex(v.charisma_curr)
-        };
         
-        v.level=bound(v.level,1,cls.maxlvl,true);
-        v.hit_dice=cls.hdprog[v.level - 1];
-        v.current_xp = v.current_xp ? getInt(v.current_xp.replace(/,/g,'')).toLocaleString() : 0;
-        v.xp_goal=cls.xpgoal[v.level - 1].toLocaleString();
-        v.xbonus=calXpBonus({
-            type: cls.xpmods.type,
-            pr1: v[cls.xpmods.pr1],
-            pr2: (cls.xpmods.pr2=="none") ? "none" : v[cls.xpmods.pr2]
-        });
-        v.requirements = requirements(cls.requir,v[cls.requir]||0);
-        v.prime_requisite=capitalize(cls.xpmods.pr1) + ((cls.xpmods.pr2=="none") ? "" : (" and "+capitalize(cls.xpmods.pr2)));
-        v.restrictions_armour=cls.armour;
-        v.restrictions_weapons=cls.weapon;
-        v.starting_languages=cls.langes;
+        /*
         v.class_notes=cls.classNote;
         v.vision=cls.vision;
         v.listen=cls.listen;
@@ -1365,43 +746,9 @@
         v.cp_coins = coins.coinvalues[4].toLocaleString();
         v.weight_of_coins=coins.weight;
         v.coins_in_gold=coins.value;
-        
-        v.save_d=cls.saves[v.level - 1][0];
-        v.save_w=cls.saves[v.level - 1][1];
-        v.save_p=cls.saves[v.level - 1][2];
-        v.save_b=cls.saves[v.level - 1][3];
-        v.save_s=cls.saves[v.level - 1][4];
-        
-        v.strength_melee=data.statadj.bonus[statIdx.str];
-        v.strength_open_doors=data.statadj.doors[statIdx.str];
-        v.spoken_languages=data.statadj.speak[statIdx.int];
-        v.literacy=data.statadj.reads[statIdx.int];
-        v.magic_saves=data.statadj.bonus[statIdx.wis];
-        v.dexterity_ac=data.statadj.bonus[statIdx.dex];
-        v.dexterity_missile=data.statadj.bonus[statIdx.dex];
-        v.dexterity_initiative=data.statadj.react[statIdx.dex];
-        v.constitution_hp=data.statadj.bonus[statIdx.con];
-        v.charisma_react=data.statadj.react[statIdx.cha];
-        v.charisma_max=statIdx.cha + 1;
-        v.charisma_loyalty=statIdx.cha + 4;
-        
-        v.thaco=cls.thaco[v.level - 1];
-        v.acp9=v.thaco - 9;
-        v.acp8=v.thaco - 8;
-        v.acp7=v.thaco - 7;
-        v.acp6=v.thaco - 6;
-        v.acp5=v.thaco - 5;
-        v.acp4=v.thaco - 4;
-        v.acp3=v.thaco - 3;
-        v.acp2=v.thaco - 2;
-        v.acp1=v.thaco - 1;
-        v.acp0=v.thaco - 0;
-        v.acn1=v.thaco + 1;
-        v.acn2=v.thaco + 2;
-        v.acn3=v.thaco + 3;
-        v.attack_bonus=cls.attak[v.level - 1];
-        v.thaco_on=v.use_thaco;
 
+        
+        */
         setAttrs(v);
     };
 
@@ -1412,5 +759,3 @@
     });
 
 </script>
-
--->
